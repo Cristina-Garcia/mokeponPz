@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300&display=swap");
+
+body {
+  background-image: url("./image/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 600px;
+  position: absolute;
+  top: 10px;
+  color: #fff;
+  text-align: center;
+  padding-block: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.section-pet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: #f1f1f0;
+  width: 310px;
+  height: 50px;
+  font-family: "Lilita One", cursive;
+}
+.subtitle {
+  color: #f1f1f0;
+}
+.cards {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta-de-mokepon {
+  width: 180px;
+  height: 120px;
+  background-color: #c2d2e9;
+  padding: 10px;
+
+  border: 5px solid #091d36;
+
+  border-radius: 20%;
+  box-sizing: border-box;
+  color: #091d36;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tarjeta-de-mokepon:hover {
+  background-color: #f1f1f0;
+}
+input:checked + label {
+  background-color: #f1f1f0;
+}
+.tarjeta-de-mokepon img {
+  width: 80px;
+}
+input {
+  display: none;
+}
+.button-pet {
+  margin-top: 30px;
+}
+.button-pet,
+.button-attack {
+  width: 120px;
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+  background-color: #3a4e7a;
+  color: #f1f1f0;
+  border-radius: 5px;
+  cursor: pointer;
+  /* margin-top: 50px; */
+}
+.type-element {
+  display: flex;
+  gap: 30px;
+}
+#section-attack {
+  flex-direction: column;
+  align-items: center;
+}
+
+#message {
+  background: #091d36;
+  width: 300px;
+  height: 100px;
+  margin-top: 20px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 20px;
+}
+#button-restart {
+  border: none;
+  background: none;
+  color: #f1f1f0;
+  cursor: pointer;
+}
+
+#button-restart:hover {
+  color: #c2d2e9;
+}
+
+.result-end-game {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  /* justify-self: center;
+  text-align: center; */
+  gap: 30px;
+}
+.result-enemy,
+.result-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* hasta este valor de pantalla sucederá lo que coloque a continuación */
+
+@media (max-width: 360px) {
+  .cards,
+  .type-element {
+    flex-direction: column;
+  }
+}
