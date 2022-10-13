@@ -10,6 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;
 }
 .game {
   background-color: rgba(0, 0, 0, 0.5);
@@ -23,7 +24,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: auto;
 }
 .section-pet {
   display: flex;
@@ -80,7 +80,7 @@ input {
 }
 .button-pet,
 .button-attack {
-  width: 120px;
+  width: 80px;
   height: 40px;
   padding: 5px;
   text-align: center;
@@ -102,6 +102,7 @@ input {
 
 #message {
   background: #091d36;
+  color: #f1f1f0;
   width: 300px;
   height: 100px;
   margin-top: 20px;
@@ -135,12 +136,43 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #f1f1f0;
 }
 /* hasta este valor de pantalla sucederá lo que coloque a continuación */
 
-@media (max-width: 360px) {
+#see-map {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#see-map button {
+  width: 80px;
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+  background-color: #3a4e7a;
+  color: #f1f1f0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 8px;
+}
+@media (max-width: 560px) {
+  .game {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+  }
   .cards,
   .type-element {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 300px) {
+  #see-map div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

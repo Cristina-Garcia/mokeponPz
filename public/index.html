@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mokepon</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- <script src="./code.js"></script> -->
+  </head>
+  <body>
+    <div class="game">
+      <section class="section-pet" id="section-pet">
+        <h1 class="title">MOKEPON 🔥💧🌱</h1>
+        <h2 class="subtitle">Elige a tu mascota:</h2>
+        <div id="conteiner-cards" class="cards">
+      
+        </div>
+
+        <button class="button-pet" id="button-pet">Seleccionar</button>
+      </section>
+      <section id="see-map">
+        <h2 class="subtitle">RECORRE EL MAPA CON TU MOKEPON</h2>
+        <canvas id="map"></canvas>
+        <button 
+        ontouchstart="moveUp()"
+        onmousedown="moveUp()" 
+        ontouchend ="stopMove()" 
+        onmouseup="stopMove()" 
+        >Arriba</button>
+       <div>
+         <button 
+         ontouchend ="stopMove()"
+         onmouseup="stopMove()" 
+          ontouchstart="moveLeft()"
+         onmousedown="moveLeft()">Izquierda</button>
+         <button 
+         ontouchend ="stopMove()"
+         onmouseup="stopMove()" 
+          ontouchstart="moveDown()"
+         onmousedown="moveDown()">Abajo</button>
+         <button 
+         ontouchend ="stopMove()"
+         onmouseup="stopMove()"
+          ontouchstart="moveRight()" 
+         onmousedown="moveRight()">Derecha</button>
+       </div>
+      </section>
+      <section id="section-attack">
+        <h1 class="title">MOKEPON 🔥💧🌱</h1>
+        <h2 class="subtitle">Elige tu ataque:</h2>
+        
+        <div id="conteiner-attacks" class="type-element">
+         
+        </div>
+
+        <div id="message">
+          <p id="result">¡ADELANTE!</p>
+          <section id="restart">
+            <button id="button-restart">Reiniciar</button>
+          </section>
+        </div>
+
+        <div class="result-end-game">
+          <div class="result-player""">
+            <p>Tú:</p>
+            <p id="life-player">0</p>
+            <p id="name-pet"></p>
+            <div id="attack-player"></div>
+          </div>
+          <div class="result-enemy">
+            <p>Enemigo</p>
+            <p id="life-enemy">0</p>
+            <p id="namePetEnemy"></p>
+            <div id="attack-enemy"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./codePro.js"></script>
+  </body>
+</html>
